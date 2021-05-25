@@ -21,7 +21,6 @@ public class NotJustInMemoryDAO implements DAO {
     private final String SAVE_FILE_NAME = "save.dat";
     private final SortedMap<ByteBuffer, Record> storage = new ConcurrentSkipListMap<>();
     private final DAOConfig config;
-
     public NotJustInMemoryDAO(DAOConfig config) {
         this.config = config;
         Path pathFile = config.getDir().resolve(SAVE_FILE_NAME);
